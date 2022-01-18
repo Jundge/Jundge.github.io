@@ -3,10 +3,9 @@
 *, *::before, *::after { box-sizing: border-box }
 html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
 scroll-behavior: smooth; scroll-padding-top: 20px }
-body { max-width: 1600px; line-height: 1.5; margin-left: auto; margin-right: auto; 
+body { /* max-width: 1920px; */ line-height: 1.5; margin-left: auto; margin-right: auto; 
 min-height: 100vh; text-rendering: optimizeSpeed }  
 img { width: 100%; height: auto; display: block }
-h1, h2, h3, h4 { width: 100% }
 input, button, textarea, select { font: inherit }
 
 /* ================= ENDS ================ */
@@ -17,27 +16,36 @@ input, button, textarea, select { font: inherit }
 /* Mobiles */
 @media (max-width: 767px) { body { padding: 12% 8% } }
 
-h1 {
+body { 
     text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 78px;
     font-weight: normal;
     letter-spacing: -2px;
-    margin-bottom: 32px;
-    font-size: 84px;
+    margin-bottom: 12px;
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 36px;
-    margin-bottom: 4px;
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 48px;
+    line-height: 1.2;
 }
 
 h3 {
     font-size: 24px;
-    margin-bottom: 4px;  
+    margin-top: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 p {
-    font-family: sans-serif;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 16px;
 }
+
