@@ -1,2 +1,67 @@
 /* Add your custom styles here */
 .hero-block h2 { color: #ff0404 }
+
+.col-3 a {
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.col-3 a:before {
+    content: '';
+    border-bottom: solid 1px #d9534f;
+    position: absolute;
+    bottom: 0; left: 30%;
+    width: 0;
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0); 
+}
+  
+.col-3 a:hover:before {
+    border-bottom: solid thin #d9534f;
+    width: 40%;
+    -webkit-animation: heartbeat-x 1.7s infinite ease-in;
+            animation: heartbeat-x 1.7s infinite ease-in;
+}
+  
+.col-3 a:hover {
+    -webkit-animation: heartbeat 1.7s infinite ease-in;
+            animation: heartbeat 1.7s infinite ease-in;
+}
+  
+  @-webkit-keyframes heartbeat {
+    0% { -webkit-transform: scale(1); }
+    10% { -webkit-transform: scale(1.1); }
+    20% { -webkit-transform: scale(1); }
+    30% { -webkit-transform: scale(1.1); }
+    40% { -webkit-transform: scale(1); }
+}
+  
+  @-webkit-keyframes heartbeat-x {
+    0% { -webkit-transform: scaleX(0); }
+    10% { -webkit-transform: scaleX(1); }
+    20% { -webkit-transform: scaleX(0); }
+    30% { -webkit-transform: scaleX(1); }
+    40% { -webkit-transform: scaleX(0); }
+}
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.1); }
+    20% { transform: scale(1); }
+    30% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+}
+  
+  @keyframes heartbeat-x {
+    0% { transform: scaleX(0); }
+    10% { transform: scaleX(1); }
+    20% { transform: scaleX(0); }
+    30% { transform: scaleX(1); }
+    40% { transform: scaleX(0); }
+}
