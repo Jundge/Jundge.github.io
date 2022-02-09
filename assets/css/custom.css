@@ -1,5 +1,67 @@
 /* Add your custom styles here */
-.hero-block h2 { color: #ff0404 }
+.hero-block h2 { color: hsla(180, 100%, 50%, 1) }
+
+.hero-block a.btn-secondary:link,
+.hero-block a.btn-secondary:visited { border-color: hsla(180, 100%, 50%, 1) }
+
+
+section.section-style-1.theme-light p:link,
+section.section-style-1.theme-light p:visited { color: white }
+
+.footerrr {
+  background-color: #eceef0;
+}
+
+.footerrr h2{
+  color: black;
+}
+
+.footerrr p{
+  color: hsla(180, 100%, 50%, 1);
+}
+
+footer ul.footer-icons li a:link i, 
+footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}
+
+:root {
+  --bg: white;
+  --color: black;
+  --underline-width: 8px;
+  --underline-block-width: 20px;
+  --underline-color: hsla(180, 100%, 50%, 0.5);
+  --underline-color-hover: hsla(180, 100%, 50%, 1);
+  --underline-transition: 0.7s;
+}
+
+
+.exercice a {
+  color: var(--color);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+
+.exercice a:hover {
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}
+
+/* heart-beaten Van-gogh Sneazzy Smoothies */
+
+.col-3 p{
+  color: black
+}
 
 .col-3 a {
     text-transform: uppercase;
@@ -11,7 +73,7 @@
 
 .col-3 a:before {
     content: '';
-    border-bottom: solid 1px #d9534f;
+    border-bottom: solid 1px hsla(180, 100%, 50%, 1);
     position: absolute;
     bottom: 0; left: 30%;
     width: 0;
@@ -23,7 +85,7 @@
 }
   
 .col-3 a:hover:before {
-    border-bottom: solid thin #d9534f;
+    border-bottom: solid thin hsla(180, 100%, 50%, 1);
     width: 40%;
     -webkit-animation: heartbeat-x 1.7s infinite ease-in;
             animation: heartbeat-x 1.7s infinite ease-in;
@@ -64,4 +126,66 @@
     20% { transform: scaleX(0); }
     30% { transform: scaleX(1); }
     40% { transform: scaleX(0); }
+}
+
+/* glow buttonn */
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }

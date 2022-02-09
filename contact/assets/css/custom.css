@@ -138,23 +138,51 @@
 /* Global font */
 body { font-family: var(--global-font) }
 
+header.hero-block a.btn-primary:link,
+header.hero-block a.btn-primary:visited { color: var(--black-000) }
+
+
 header.hero-block { background-color: var(--white-000) }
-header.hero-block h1 { color: var(--teal-400) }
+header.hero-block h1 { color: hsla(180, 100%, 50%, 1) }
 
 header.hero-block a.btn-primary:link,
-header.hero-block a.btn-primary:visited { border-color: var(--white-000) }
+header.hero-block a.btn-primary:visited { background-color: white }
+
+.hero-block a.btn-secondary:link,
+.hero-block a.btn-secondary:visited { background-color: white }
+
+header.hero-block a.btn-primary:link,
+header.hero-block a.btn-primary:visited { border-color: hsla(180, 100%, 50%, 1) }
+
+.hero-block a.btn-secondary:link,
+.hero-block a.btn-secondary:visited { border-color: hsla(180, 100%, 50%, 1) }
 
 .theme-one { background-color: var(--white-000) }
-.theme-one .col-1 h2 { color: var(--teal-400) }
-.theme-one .col-3 h3 { color: var(--teal-400) }
+.theme-one .col-1 h2 { color: hsla(180, 100%, 50%, 1) }
+.theme-one .col-3 h3 { color: hsla(180, 100%, 50%, 1) }
 
-#contact-form h2 { color: var(--teal-400) }
+.footerrr {
+    background-color: #eceef0;
+}
+  
+  .footerrr h2{
+    color: black;
+}
+  
+  .footerrr p{
+    color: hsla(180, 100%, 50%, 1);
+}
+  
+footer ul.footer-icons li a:link i, 
+footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}
+
+#contact-form h2 { color: hsla(180, 100%, 50%, 1) }
 #contact-form p { color: var(--black-000) }
 #contact-form p a:link { color: var(--black-000) }
 #contact-form p a:visited { color: var(--black-000) }
-#contact-form p a:focus { color: var(--teal-300) }
-#contact-form p a:hover { color: var(--teal-300) }
-#contact-form p:active { color: var(--teal-300) }
+#contact-form p a:focus { color: hsla(180, 100%, 50%, 1) }
+#contact-form p a:hover { color: hsla(180, 100%, 50%, 1) }
+#contact-form p:active { color: hsla(180, 100%, 50%, 1) }
 #contact-form p a:link { background-color: var(--gray-100) }
 #contact-form p a:visited { background-color: var(--gray-100) }
 .container-contact-form { background-color: var(--gray-100) }
