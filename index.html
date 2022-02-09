@@ -2,6 +2,7 @@
 <!-- saved from url=(0052)https://www.munnelly.com/lunevedy/starter/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
+    <script src="https://kit.fontawesome.com/c1296feae2.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptiste Mabille | Creative Web Developer</title>
@@ -32,14 +33,13 @@
 
 <body>
 
-    <!-- navigation menu -->
+    <!-- navigation menu 
 
     <nav class="container-menu menu-dark menu-desktop text-center-mobile">
         <a href="#"><img src="assets/img/logo3.png" alt="a"></a>
         <ul>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">My work</a></li>
-            <li><a href="#">Contact me</a></li>
+            <li><a href="portfolio/index.html">My work</a></li>
+            <li><a href="contact/index.html">Contact me</a></li>
             <li><a href="#" id="btn-cta"><span>. _.</span><i class="fas fa-arrow-right"></i></a></li>
         </ul>
         <div class="item-icon">
@@ -49,6 +49,8 @@
         </div>
     </nav>
     
+    -->
+
     <header class="hero-block hero-bg text-center-desktop text-center-mobile">
     
         <div class="container-text">
@@ -58,11 +60,11 @@
         </div>
     
         <div class="container-btn">
-            <a href="portfolio/index.html" class="btn btn-secondary btn-rounded"><i class="fas fa-shopping-cart"></i> Portfolio</a>
-            <a href="contact/index.html" class="btn btn-secondary btn-rounded"><i class="fas fa-arrow-right"></i> Contact</a>
+            <a href="portfolio/index.html" class="btn btn-secondary btn-rounded slide-in-left">Portfolio</a>
+            <a href="contact/index.html" class="btn btn-secondary btn-rounded slide-in-right"> Contact</a>
         </div>
         <div class="container-media">
-            <img src="assets/img/webdev.jpg" alt="Placeholder image">
+            <img src="assets/img/webdev.jpg" alt="Webdev">
         </div>
     
         <div class="container-overlay"></div>
@@ -77,46 +79,74 @@
 
 
 
-        <section class="section-style-1 theme-light">
-            
-            <h2>Exercices</h2>
 
-            
+		<section class="container-flex cols-2-split theme-one img-shadow split-image-left slide-in-bottom">
 
-            <p><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
-            <p><a href="exercises/page-2.html">IBAT Chocolates</a></p>
-            <p><a href="exercises/page-3.html">Prince & Purple Rain</a></p>
-            <p><a href="exercises/page-4.html">Lorem Ipsum Text</a></p>
-            <p><a href="exercises/page-10.html">Web Page With Panels</a></p>
-            <p><a href="exercises/hero-text.html">Hero block with animated text</a></p> 
-            <p><a href="exercises/hero-image.html">Hero block with background image</a></p>  
+            <div class="col-2">
+                
+                
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus dignissimos facilis fugiat sed sapiente.</p>
+                <p>Vel, sit perferendis officia ad molestias optio deserunt iste excepturi qui unde dolores architecto error assumenda. Iusto ipsum eum possimus sed sapiente. Integer placerat placerat id commodo.</p>
 
-             
-
+            </div>
+    
+            <div class="col-2">
+                
+            <figure>
+                <img src="assets/img/undraw_adventure_map_hnin.svg" alt="Commerce">
+            </figure></div>
         </section>
 
-        <section class="container-flex theme-one img-shadow img-corners-soft text-center">
-            <div class="col-1 text-center"><h2>Portfolio</h2>
+        
+		<section class="container-flex cols-2-split split-image-right theme-one img-shadow">
+
+            <div class="col-2">
+                
+                
+            <h2>Exercices</h2>
+            <p>You can find all exercices thats i've done so far.</p>
+
+                <ul class="exercice">
+                    <li><a href="exercises/page-1.html"  style="text-decoration:none;"> A Tale of Two Cities</a></li>
+                    <li><a href="exercises/page-2.html" style="text-decoration:none;"> IBAT Chocolates</a></li>
+                    <li><a href="exercises/page-3.html" style="text-decoration:none;"> Prince & Purple Rain</a></li>
+                    <li><a href="exercises/page-4.html" style="text-decoration:none;"> Lorem Ipsum Text</a></li>
+                    <li><a href="exercises/page-10.html"  style="text-decoration:none;"   > Web Page With Panels</a></li>
+                    <li><a href="exercises/hero-text.html" style="text-decoration:none;"> Hero block with animated text</a></li>
+                    <li><a href="exercises/hero-image.html" style="text-decoration:none;"> Hero block with background image</a></li>
+                    <a href="exercises/hero-image.html"></a>
+                </ul>
+
+            </div>
+    
+            <div class="col-2">
+                <figure><img src="assets/img/undraw_online_page_re_lhgx.svg" alt="eCommerce"></figure>
+            </div>
+        </section>
+
+        <section class="container-flex theme-two img-corners-soft text-center">
+            <div class="col-1 text-center img-shadow"><h2>Portfolio</h2>
                 
                 
             <h3>Here are the different projects I have done so far.</h3></div>
 
-            <div class="col-3">
-                <figure><img src="assets/img/project-van-gogh.png" alt="Van-gogh"></figure>
+            <div class="col-3 img-shadow slide-in-left">
+                <figure><img src="assets/img/undraw_making_art_re_ee8w.svg" alt="Van-gogh"></figure>
                     <h3><a href="portfolio/van-gogh/index.html">Van-gogh</a></h3>
                     
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
             </div>
 
-            <div class="col-3">
-                <figure><img src="assets/img/project-fashion.jpg" alt="Super Snazzy"></figure>
+            <div class="col-3 img-shadow">
+                <figure><img src="assets/img/undraw_art_museum_-8-or4.svg" alt="Super Snazzy"></figure>
                 <h3><a href="portfolio/fashion/index.html">Super Snazzy</a></h3>
 
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
             </div>
 
-            <div class="col-3">
-                <figure><img src="assets/img/project-smoothie.jpg" alt="Smoothies"></figure>
+            <div class="col-3 img-shadow slide-in-right">
+                <figure><img src="assets/img/undraw_designer_mindset_re_2w1k.svg" alt="Smoothies"></figure>
                 <h3><a href="portfolio/smoothies/index.html">Smoothies</a></h3>
 
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
@@ -128,14 +158,24 @@
     
     <!-- footer -->
    
-	<footer>
+	<footer class="footerrr">
 
-		<h2>Thaks for visiting my website !</h2>
+		<h2>Thanks for visiting my website !</h2>
+
+        <!-- glowing button 
+            
+        <section class="glow-on-hover">
+            <p><a href="https://play2048.co/"></a></p>
+        </section>
+
+        -->
 
 		<ul class="footer-links">
+        <!--
 			<li><a href="#">Link</a></li>
 			<li><a href="#">Link</a></li>
 			<li><a href="#">Link</a></li>
+        -->
 		</ul>
 
 		<ul class="footer-icons">
@@ -146,11 +186,11 @@
 			<li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
 		</ul>
 
-        <p class="privacy"><a href="#">Privacy &amp; Legal</a></p>
-
 	</footer>
        
     <script src="./index_files/menu.js.téléchargement"></script>
 
 
 </body></html>
+
+
