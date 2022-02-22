@@ -230,16 +230,16 @@ header.hero-block h1 { color: hsla(180, 100%, 50%, 1) }
 }
 
 .footerrr {
-background-color: #eceef0;
+  background-color: #eceef0;
 }
-  
+
 .footerrr h2{
   color: black;
 }
-  
+
 .footerrr p{
   color: hsla(180, 100%, 50%, 1);
 }
-  
-footer ul.footer-icons li a:link i, 
+
+footer ul.footer-icons li a:link i,
 footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}

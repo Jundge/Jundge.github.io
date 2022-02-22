@@ -183,12 +183,83 @@ footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}
 #contact-form p a:focus { color: hsla(180, 100%, 50%, 1) }
 #contact-form p a:hover { color: hsla(180, 100%, 50%, 1) }
 #contact-form p:active { color: hsla(180, 100%, 50%, 1) }
-#contact-form p a:link { background-color: var(--gray-100) }
-#contact-form p a:visited { background-color: var(--gray-100) }
-.container-contact-form { background-color: var(--gray-100) }
-#contact-form { background-color: var(--gray-100) }
-#contact-form p a:focus { background-color: var(--gray-100) } 
-#contact-form p a:hover { background-color: var(--gray-100) }
-#contact-form p a:active { background-color: var(--gray-100) }
+#contact-form p a:link { background-color: white }
+#contact-form p a:visited { background-color: white }
+.container-contact-form { background-color: white }
+#contact-form { background-color: white }
+#contact-form p a:focus { background-color: white } 
+#contact-form p a:hover { background-color: white }
+#contact-form p a:active { background-color: white }
 #contact-form label { color: var(--black-000) }
 
+.exercice a {
+  color: var(--color);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+
+.exercice a:hover {
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}
+
+@-webkit-keyframes animlogo {
+	0% {
+		top: 10px;
+	}
+	50% {
+		top: 50px;
+	}
+	100% {
+		top: 10px;
+	}
+}
+
+@-moz-keyframes animlogo {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+@keyframes animlogo {
+	0% {
+		top: 10px;
+	}
+	50% {
+		top: 50px;
+	}
+	100% {
+		top: 10px;
+	}
+}
+
+.anim {
+    position: relative;
+    -webkit-animation-name: animlogo;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: animlogo;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    animation-name: animlogo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
