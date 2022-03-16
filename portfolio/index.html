@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/lunadoge.min.css">
 
 	<!-- Google Fonts -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
 	<!-- Font Awesome 5 icons -->
 	<link href="./index_files/all.min.css" rel="stylesheet" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
@@ -65,19 +65,19 @@
         <section class="container-flex theme-one text-center">
             <div class="col-1 text-center">
                 <h2><br/></h2>
-                <h3  class="slide-in-bottom">Here are my 3 small projects, they allowed me to discover the world of web development.</h3>
+                <h3  class="slide-in-bottom">Here are my 4 small projects, they allowed me to discover the world of web development. The project "Crypto-Wallet" is on my home page.</h3>
             </div>
 
             <div class="col-3">
                 <figure><img src="assets/img/museum.svg" alt="Building"></figure>
-                <h3><a href="../portfolio/van-gogh/index.html">Van-gogh</a></h3>
+                <h3 style ="font-family: Bebas Neue; font-size: 32px;"><a href="../portfolio/van-gogh/index.html">Van-gogh</a></h3>
 
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
             </div>
 
             <div class="col-3">
                 <figure><img src="assets/img/museum.svg" alt="Building"></figure>
-                <h3><a href="../portfolio/fashion/index.html">Super Snazzy</a></h3>
+                <h3 style ="font-family: Bebas Neue; font-size: 32px;"><a href="../portfolio/fashion/index.html">Super Snazzy</a></h3>
 
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
             </div>
@@ -85,7 +85,7 @@
             <div class="col-3">
 
                 <figure><img src="assets/img/museum.svg" alt="Building"></figure>
-                <h3><a href="../portfolio/smoothies/index.html">Smoothies</a></h3>
+                <h3 style ="font-family: Bebas Neue; font-size: 32px;"><a href="../portfolio/smoothies/index.html">Smoothies</a></h3>
 
                 <p><br/>Lorem ipsum dolor sit amet voluptas. Consectetur adipisicing. Possimus dolores accusamus facilis fugiat. Velsit perferendis officia.</p>
             </div>
@@ -96,9 +96,11 @@
     
     <!-- footer -->
     
-    <footer class="footerrr">
+	<footer class="footerrr">
 
-		<h2>Thanks for visiting my website !</h2>
+        <div id="container">
+            <div id="text"></div><div id="cursor"></div>
+        </div>
 
         <!-- glowing button 
             
@@ -117,15 +119,75 @@
 		</ul>
 
 		<ul class="footer-icons">
-			<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-github-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fab fa-linkedin hithere"></i></a></li>
+			<li><a href="https://github.com/Jundge/Jundge.github.io" target="_blank"><i class="fab fa-github-square "></i></a></li>
+			<li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square "></i></a></li>
+			<li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square hithere"></i></a></li>
 		</ul>
 
-	</footer>   
+	</footer>  
     <script src="assets/js/menu.js"></script>
+
+    <script type="text/javascript">
+
+        // List of sentences
+        var _CONTENT = [ "Thanks for visiting my website !", "Do not hesitate to contact me", "Or just to give me some feedbacks", "<3" ];
+        
+        // Current sentence being processed
+        var _PART = 0;
+        
+        // Character number of the current sentence being processed 
+        var _PART_INDEX = 0;
+        
+        // Holds the handle returned from setInterval
+        var _INTERVAL_VAL;
+        
+        // Element that holds the text
+        var _ELEMENT = document.querySelector("#text");
+        
+        // Implements typing effect
+        function Type() { 
+            var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX++;
+        
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if(text === _CONTENT[_PART]) {
+                clearInterval(_INTERVAL_VAL);
+                setTimeout(function() {
+                    _INTERVAL_VAL = setInterval(Delete, 50);
+                }, 1000);
+            }
+        }
+        
+        // Implements deleting effect
+        function Delete() {
+            var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX--;
+        
+            // If sentence has been deleted then start to display the next sentence
+            if(text === '') {
+                clearInterval(_INTERVAL_VAL);
+        
+                // If last sentence then display the first one, else move to the next
+                if(_PART == (_CONTENT.length - 1))
+                    _PART = 0;
+                else
+                    _PART++;
+                _PART_INDEX = 0;
+        
+                // Start to display the next sentence after some time
+                setTimeout(function() {
+                    _INTERVAL_VAL = setInterval(Type, 100);
+                }, 200);
+            }
+        }
+        
+        // Start the typing effect on load
+        _INTERVAL_VAL = setInterval(Type, 100);
+        
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <script>

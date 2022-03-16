@@ -162,11 +162,11 @@ header.hero-block h1 { color: hsla(180, 100%, 50%, 1) }
 
 .theme-one { background-color: var(--white-000) }
 .theme-one .col-1 h2 { color: hsla(180, 100%, 50%, 1) }
-.theme-one .col-3 h3 { color: hsla(180, 100%, 50%, 1) }
+.theme-one .col-3 h3 { color: black }
 
 .col-3 a {
     text-transform: uppercase;
-    color: hsla(180, 100%, 50%, 1);
+    color: black;
     text-decoration: none;
     position: relative;
     display: block;
@@ -243,3 +243,52 @@ header.hero-block h1 { color: hsla(180, 100%, 50%, 1) }
 
 footer ul.footer-icons li a:link i,
 footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}
+
+/* type - delete anim */
+
+#container {
+  font-family: Bebas Neue;
+	text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: black;
+	letter-spacing: 2px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 35px;
+	background-color: hsla(180, 100%, 50%, 1);
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: hsla(180, 100%, 50%, 1); 
+	}
+}
+
+.footerrr {
+  background-color: #eceef0;
+}
+
+.footerrr h2{
+  color: black;
+}
+
+.footerrr p{
+  color: black;
+}
+
+footer ul.footer-icons li a:link i, 
+footer ul.footer-icons li a:visited i { color: black}
