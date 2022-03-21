@@ -263,3 +263,37 @@ footer ul.footer-icons li a:visited i { color: hsla(180, 100%, 50%, 1)}
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
+
+/* delete write anim */
+
+#container {
+  font-family: Bebas Neue;
+	text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: black;
+	letter-spacing: 2px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 35px;
+	background-color: hsla(180, 100%, 50%, 1);
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: hsla(180, 100%, 50%, 1); 
+	}
+}
